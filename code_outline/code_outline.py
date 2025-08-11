@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 """
-Repo Analyzer — SECTIONED v5
+code outliner — initial piece of CodeCompass
 - Directories as H2, files as H3 (distinct subsections)
 - Ordering: README/code first, docs next, config/build last
 - Always rescan (no change detection)
