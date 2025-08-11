@@ -1,4 +1,4 @@
-# repo-analyzer
+# code-outline
 
 Generate a structured `PROJECT_OVERVIEW.md` for any repo:
 - Summaries per file
