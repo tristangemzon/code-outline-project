@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Builds
+build/
+dist/
+*.whl
+
+# IDE
+.vscode/
+.idea/
+
+# Your app
+PROJECT_OVERVIEW.md
+repo_analyzer/config.json
+config.json

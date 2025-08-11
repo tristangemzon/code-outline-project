@@ -1,0 +1,13 @@
+{
+  "provider": "azure",
+  "model": "gpt-4o",
+
+  "openai_api_key": "sk-your-openai-key",
+  "openai_base_url": "https://api.openai.com/v1",
+  "openai_org": null,
+
+  "azure_api_key": "your-azure-key",
+  "azure_endpoint": "https://your-resource-name.openai.azure.com",
+  "azure_deployment": "gpt-4o",
+  "azure_api_version": "2024-12-01-preview"
+}
