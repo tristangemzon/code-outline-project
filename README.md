@@ -29,12 +29,20 @@ You can install this project locally before it’s published to PyPI:
 
 ## 🚀 Usage
 
-Run against a folder:
+Run against a repo:
 ```bash
-code-outline /path/to/folder --overview --config config.json
+code-outline /path/to/repo --overview --config config.json
 ```
 
 If you have a `config.json` in the same folder as the package, you can omit `--config`.
+
+**Output location:**  
+After scanning, a file called `PROJECT_OVERVIEW.md` will be written **inside the folder you specified** in the command.  
+Example:
+```bash
+code-outline ~/projects/my-app
+# → writes ~/projects/my-app/PROJECT_OVERVIEW.md
+```
 
 ---
 
@@ -48,6 +56,25 @@ cp code_outline/config.json.example code_outline/config.json
 - Supports **OpenAI** and **Azure OpenAI** — choose provider in the config.
 - Uses your chosen LLM to produce summaries and overviews.
 - Do **not** commit secrets to Git.
+
+---
+
+## 🛠 How It Works
+
+1. **Scans your repo**  
+   Recursively finds code, documentation, and config files while ignoring common build/output directories.
+
+2. **Detects imports & dependencies**  
+   Identifies dependencies from manifests like `package.json`, `requirements.txt`, `go.mod`, `.csproj`, etc.
+
+3. **Generates per-file summaries (LLM)**  
+   Sends file content, imports, and metadata to your configured LLM, which returns concise summaries.
+
+4. **Creates an optional high-level overview (LLM)**  
+   If `--overview` is passed, it compiles all file summaries and asks the LLM to produce a big-picture explanation.
+
+5. **Writes results to Markdown**  
+   Produces a structured `PROJECT_OVERVIEW.md` in the repo folder you scanned, ready for onboarding or documentation.
 
 ---
 
