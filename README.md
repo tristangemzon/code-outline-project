@@ -1,7 +1,7 @@
 # code-outline
 
-Generate a structured `PROJECT_OVERVIEW.md` for any repo:
-- Summaries per file
+LLM-driven tool to generate a structured `PROJECT_OVERVIEW.md` for any repo:
+- Summaries per file generated via a Large Language Model (LLM)
 - Detected package manifests (Node, Python, Go, .NET)
 - Optional high-level overview section
 
@@ -46,6 +46,11 @@ cp code_outline/config.json.example code_outline/config.json
 ```
 
 - Supports **OpenAI** and **Azure OpenAI** — choose provider in the config.
+- Uses your chosen LLM to produce summaries and overviews.
 - Do **not** commit secrets to Git.
 
 ---
+
+## 📄 License
+
+[MIT](LICENSE)
